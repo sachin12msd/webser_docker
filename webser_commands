@@ -1,0 +1,28 @@
+yum install httpd -y
+
+
+#activate the service
+
+
+httpd in docker (instead of systemctl)
+
+#now ping from another container name as webclient
+
+#check the curl command avaialble or not
+
+yum whatprovides curl
+
+ifconfig
+
+yum install net-tools
+
+
+then use curl command to check the webserver
+
+curl curl http://<webconatiner ip>/vimal.html
+
+then it shows u the resu;ltt 
+
+
+
+
