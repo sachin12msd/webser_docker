@@ -1,0 +1,40 @@
+
+Day 2 DCA 
+
+
+#pulling mysql image from Dockerhub
+docker pull mysql:latest
+
+#then create conatiner of mysql image 
+
+docker run -dit --name web123 -e MYSQL_ROOT_PASSWORD=redhat -e MYSQL_USER=vimal -e MYSQL_PASSWORD=redhot -e MYSQL_DATABASE=lwstudents mysql
+
+#in this command we create one user name vimal and set the passwd 
+#-d to background mode to run the container 
+#after succesfully launching the container 
+use exec command to get the bash shell of mysql
+
+docker exec -it web123 bash
+
+#then check our user by this command 
+
+mysql -u vimal -p 
+enter passwd:
+
+mysql -u root -p (for rooot login)
+
+#then  run mysql command to see the database which one is created name as lwstudents
+
+show databases;
+
+#then u can see the created databases in ur terminal
+
+#for exit use 
+
+exit ;
+#then CRTL +P+Q to exit from the conatiner 
+
+
+
+
+
