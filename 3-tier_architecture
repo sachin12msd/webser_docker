@@ -1,0 +1,16 @@
+1.Create Docker Network
+docker network create --driver <driver_name> --subnet <give the name & range> <network name>
+docker network ls
+
+2.configure your mysql database
+
+docker run -dit --name mydb1 --network docknet1 -e MYSQL_ROOT_PASSWORD=redhat -e MYSQL_USER=sachin -e MYSQL_PASSWORD=redhit -e MYSQL_DATABASE=newdb -v /mydata:/var/lib/mysql mysql:latest
+
+3.Configure your Worpress Container
+
+docker run -dit --name mywp --network docknet1 -p 8080:80 wordpress
+
+
+4.Install and Configure WordPress:
+>>>Access your WordPress site by opening a web browser and visiting http://localhost:8080.
+>>>Log in to the WordPress admin dashboard using the default credentials
